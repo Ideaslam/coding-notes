@@ -1,0 +1,985 @@
+{
+	"info": {
+		"_postman_id": "b13d9723-28ca-475c-afbb-d3db3effcefb",
+		"name": "Attendance copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LOGIN SCREEN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DATA:\"{\\\"employeeToken\\\":\\\"LCJ2GJ8PKVDGVBQ2KT6NK2JW6WB0VU5NNPK0Q375\\\",\\\"lang\\\":\\\"AR\\\"}\"}"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/login",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"login"
+					]
+				},
+				"description": "LOGIN  SCREEN"
+			},
+			"response": []
+		},
+		{
+			"name": "EMPLOYEES SCREEN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DATA:\"{\\\"employeeToken\\\":\\\"111\\\",\\\"lang\\\":\\\"AR\\\",\\\"printStatus\\\":\\\"1\\\",\\\"employeeStatus\\\":\\\"1\\\",\\\"pageId\\\":\\\"72\\\",\\\"txtsearch\\\":\\\"\\\"}\"}"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/get_Employees",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"get_Employees"
+					]
+				},
+				"description": "EMPLOYEES SCREEN"
+			},
+			"response": []
+		},
+		{
+			"name": "ATTENDACE SCREEN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"DATA\":\"{\\\"administration\\\":\\\"\\\",\\\"dateType\\\":\\\"0\\\",\\\"employeeId\\\":\\\"\\\",\\\"fromDate\\\":\\\"2017-04-12\\\",\\\"level\\\":\\\"\\\",\\\"orderby\\\":\\\"\\\",\\\"sex\\\":\\\"-1\\\",\\\"status\\\":\\\"\\\",\\\"toDate\\\":\\\"2018-5-14\\\",\\\"employeeToken\\\":\\\"GKKYIE684YIHKFGf10021\\\",\\\"lang\\\":\\\"AR\\\"}\"}"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/get_shiftStatus",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"get_shiftStatus"
+					]
+				},
+				"description": "ATTENDACE SCREEN"
+			},
+			"response": []
+		},
+		{
+			"name": "MAIN SCREEN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DATA:\"{\\\"employeeToken\\\":\\\"111\\\",\\\"lang\\\":\\\"AR\\\"}\"}"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/get_mainstats",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"get_mainstats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MUSALA SCREEN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DATA:\"{\\\"employeeToken\\\":\\\"1000\\\",\\\"lang\\\":\\\"AR\\\",\\\"txtsearch\\\":\\\"\\\"}\"}\n"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/get_musalah",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"get_musalah"
+					]
+				},
+				"description": "MUSALA SCREEN"
+			},
+			"response": []
+		},
+		{
+			"name": "VACATION SCREEN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DATA:\"{\\\"employeeToken\\\":\\\"GKKYIE684YIHKFGf1002\\\",\\\"lang\\\":\\\"AR\\\",\\\"txtsearch\\\":\\\"\\\"}\"}"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/get_vacation",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"get_vacation"
+					]
+				},
+				"description": "VACATION SCREEN"
+			},
+			"response": []
+		},
+		{
+			"name": "AGREEMENTS SCREEN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DATA:\"{\\\"employeeToken\\\":\\\"94Z76CW3DM7Q1FA2F63U40Z44O783AN4A67S6PAB\\\",\\\"lang\\\":\\\"AR\\\"}\"}"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/get_requests",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"get_requests"
+					]
+				},
+				"description": "Agreements"
+			},
+			"response": []
+		},
+		{
+			"name": "DEPARTMENT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DATA:\"{\\\"employeeToken\\\":\\\"GKKYIE684YIHKFGf1002\\\",\\\"lang\\\":\\\"AR\\\" ,\\\"txtsearch\\\":\\\"\\\"}\"}"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/get_dept",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"get_dept"
+					]
+				},
+				"description": "DEPARTMENT"
+			},
+			"response": []
+		},
+		{
+			"name": "STATUS ",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DATA:\"{\\\"employeeToken\\\":\\\"2000\\\",\\\"lang\\\":\\\"AR\\\" ,\\\"txtsearch\\\":\\\"\\\" , \\\"pageId\\\":\\\"27\\\"}\"}"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/get_status",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"get_status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm_application",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DATA:\"{\\\"employeeToken\\\":\\\"111\\\",\\\"lang\\\":\\\"AR\\\"  , \\\"orderId\\\" : \\\"109\\\"  , \\\"status\\\" : \\\"1\\\" ,\\\"Note\\\" :\\\"test 101\\\" }\"}"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/Confirm_application",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"Confirm_application"
+					]
+				},
+				"description": "1-> Accept\n2-> Refuse\n"
+			},
+			"response": []
+		},
+		{
+			"name": "SUBMIT APPLICATION SCREEN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DATA :\"{\\\"employeeToken\\\":\\\"111\\\",\\\"lang\\\":\\\"AR\\\",\\\"employeeId\\\":\\\"46197\\\",\\\"status\\\":\\\"A\\\",\\\"dateType\\\":\\\"0\\\",\\\"startDate\\\":\\\"2018-08-03\\\",\\\"endDate\\\":\\\"2018-08-03\\\",\\\"DaysNumber\\\":\\\"\\\",\\\"notes\\\":\\\"test programming2010\\\"}\"} "
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/submit_application",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"submit_application"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "INFO (APP Version)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DATA :\"{\\\"type\\\":\\\"2\\\"}\"}"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/get_info",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"get_info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CHECK TOKEN ",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{token :\"GKKYIE684YIHKFGf1002\"}"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/checkToken",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"checkToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET -TimeChange",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DATA:\"{\\\"employeeToken\\\":\\\"IZ8GQQABR8VWAEQFFHNZKGA77R66M1ISVNCAY4B8\\\",\\\"lang\\\":\\\"AR\\\" ,\\\"employeeId\\\":\\\"42986\\\" ,\\\"Date\\\":\\\"2018-05-17\\\"}\"}"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/get_TimeChange",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"get_TimeChange"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST changeTime",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\"DATA\":\"{\\\"Id\\\":\\\"403130\\\",\\\"In1\\\":\\\"08:04\\\",\\\"Note\\\":\\\"test\\\",\\\"Out1\\\":\\\"14:09\\\",\\\"employeeToken\\\":\\\"111\\\",\\\"lang\\\":\\\"AR\\\"}\"}"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/changeTime",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"changeTime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_DeviceID",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DATA:\"{\\\"employeeToken\\\":\\\"GKKYIE684YIHKFGf1002\\\", \\\"deviceId\\\" : \\\"84723ff92347ssssaaaafff98\\\" , \\\"os\\\":\\\"ANDROID\\\" ,\\\"manufacturer\\\":\\\"Samsung\\\" , \\\"device_type\\\":\\\"Galaxy S8+\\\" ,\\\"model\\\":\\\"SM-G955W\\\" , \\\"codename\\\":\\\"dream2qltecan\\\"}\"}"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/post_DeviceID",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"post_DeviceID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_DeviceID",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{token :\"94Z76CW3DM7Q1FA2F63U40Z44O783AN4A67S6PAB\"}"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/get_DeviceID",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"get_DeviceID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Notification Test ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/get_it",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"get_it"
+					]
+				},
+				"description": "return Get without bug"
+			},
+			"response": []
+		},
+		{
+			"name": "get_notify",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DATA:\"jjhg,hjgj\"}"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/get_notify",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"get_notify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_permissions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DATA:\"{\\\"employeeToken\\\":\\\"94Z76CW3DM7Q1FA2F63U40Z44O783AN4A67S6PAB\\\",\\\"lang\\\":\\\"AR\\\" }\"}"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/get_permissions",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"get_permissions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_approval_details",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DATA:\"{\\\"employeeToken\\\":\\\"94Z76CW3DM7Q1FA2F63U40Z44O783AN4A67S6PAB\\\",\\\"lang\\\":\\\"AR\\\" , \\\"reqId\\\" : \\\"5\\\" }\"}"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/get_approval_details",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"get_approval_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_companyInfo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DATA:\"{\\\"employeeToken\\\":\\\"94Z76CW3DM7Q1FA2F63U40Z44O783AN4A67S6PAB\\\",\\\"lang\\\":\\\"AR\\\" }\"}"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/get_companyInfo",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"get_companyInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "notification send",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "key=AAAAKQZtR50:APA91bGTXBYJXX2xbJq959s9mWzS_RDT94LZDkpXHnkp1fGiIMhHlMtHR_ZUUAKxPGqfJYuix-_fL5eCN4ok1kdDLWiyH-RfjPqnTCIwULE6yT90WS3ymgvsm6X57mZL2vpS6p2g9LiE"
+					},
+					{
+						"key": "Sender",
+						"value": "id=176201484189"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"notification\": { \r\n\"title\": \"Your app name\", \r\n\"body\": \"push notification detail message\",\r\n\"sound\":\"default\",\r\n\"badge\":\"100\",\r\n}, \r\n\"to\" : \"e3k3-r0cQQg:APA91bEeaSn0tZyfEAX2YjbBlwOCSyLdwTsx8lwXIUKGubJeJqDml8m7QEpUPjd3_VaQK2iGoh_t2sw94IGAhW_76HlK3y_j6lb0fXHr25NrCUDKdvhswbXNHIdBzfpjspF6M5cyHPYy\"\r\n}"
+				},
+				"url": {
+					"raw": "https://fcm.googleapis.com/fcm/send",
+					"protocol": "https",
+					"host": [
+						"fcm",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"fcm",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://fcm.googleapis.com/fcm/send Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "key=AAAAKQZtR50:APA91bGTXBYJXX2xbJq959s9mWzS_RDT94LZDkpXHnkp1fGiIMhHlMtHR_ZUUAKxPGqfJYuix-_fL5eCN4ok1kdDLWiyH-RfjPqnTCIwULE6yT90WS3ymgvsm6X57mZL2vpS6p2g9LiE"
+					},
+					{
+						"key": "Sender",
+						"value": "id=176201484189"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"notification\": { \r\n\"title\": \"Your app name\", \r\n\"body\": \"push notification detail message\",\r\n\"sound\":\"default\"\r\n}, \r\n\"to\" : \"e3k3-r0cQQg:APA91bEeaSn0tZyfEAX2YjbBlwOCSyLdwTsx8lwXIUKGubJeJqDml8m7QEpUPjd3_VaQK2iGoh_t2sw94IGAhW_76HlK3y_j6lb0fXHr25NrCUDKdvhswbXNHIdBzfpjspF6M5cyHPYy\"\r\n}"
+				},
+				"url": {
+					"raw": "https://fcm.googleapis.com/fcm/send",
+					"protocol": "https",
+					"host": [
+						"fcm",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"fcm",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "badge",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "key=AAAAKQZtR50:APA91bGTXBYJXX2xbJq959s9mWzS_RDT94LZDkpXHnkp1fGiIMhHlMtHR_ZUUAKxPGqfJYuix-_fL5eCN4ok1kdDLWiyH-RfjPqnTCIwULE6yT90WS3ymgvsm6X57mZL2vpS6p2g9LiE"
+					},
+					{
+						"key": "Sender",
+						"value": "id=176201484189"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"notification\": { \r\n\"badge\":\"33\",\r\n\"sound\" : \"default\"\r\n}, \r\n\"to\" : \"e3k3-r0cQQg:APA91bEeaSn0tZyfEAX2YjbBlwOCSyLdwTsx8lwXIUKGubJeJqDml8m7QEpUPjd3_VaQK2iGoh_t2sw94IGAhW_76HlK3y_j6lb0fXHr25NrCUDKdvhswbXNHIdBzfpjspF6M5cyHPYy\"\r\n}"
+				},
+				"url": {
+					"raw": "https://fcm.googleapis.com/fcm/send",
+					"protocol": "https",
+					"host": [
+						"fcm",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"fcm",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_deviceid",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{deviceId :\"elJGDJ7DwLA:APA91bHsXAhE0nVDeX8oMCI_EJ07ktI6fTi-XazbehfAqK041IJq7q63lYdGAByh5QRM3ksbyhdDnC1uwOT5yWOEGlm_HH6tri-QWERKaaAAPdiHi3_GHw8_A7FVyZ9abJURH4-jPZev\"}"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/delete_deviceid",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"delete_deviceid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "attend_perform OUTSIDE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{DATA :\"{ \\\"token\\\":\\\"WT7TOKSKRWXJ9HSPTTPJXB1IWTMX3LZZ265YTZME\\\" , \\\"time\\\":\\\"2018-09-09 01:35:01\\\" ,\\\"lat\\\":\\\"25.9163762\\\" ,\\\"lang\\\":\\\"45.3525871\\\",\\\"fpStatus\\\":\\\"1\\\",\\\"ip\\\":\\\"127.5454.55.1\\\" ,\\\"MAC\\\":\\\"XXXX-XXXX-XXXX-XXXX\\\"}\" }\n\t"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/attend_perform",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"attend_perform"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "attend_perform Error",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{DATA :\"{ \\\"token\\\":\\\"WT7TOKSKRWXJ9HSPTTPJXB1IWTMX3LZZ265YTZM\\\" , \\\"time\\\":\\\"2018-09-09 01:35:01\\\" ,\\\"lat\\\":\\\"25.9163762\\\" ,\\\"lang\\\":\\\"45.3525871\\\",\\\"fpStatus\\\":\\\"1\\\",\\\"ip\\\":\\\"127.5454.55.1\\\" ,\\\"MAC\\\":\\\"XXXX-XXXX-XXXX-XXXX\\\"}\" }\n\t"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/attend_perform",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"attend_perform"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "attend_perform Success",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{DATA :\"{ \\\"token\\\":\\\"O1SAFLBYB4CV2R3BO2R04CM8ECAWW2XJZ07HUNVV\\\" , \\\"time\\\":\\\"2018-09-09 01:35:01\\\" ,\\\"lat\\\":\\\"25.9163762\\\" ,\\\"lang\\\":\\\"45.3525871\\\",\\\"fpStatus\\\":\\\"1\\\",\\\"ip\\\":\\\"127.5454.55.1\\\" ,\\\"MAC\\\":\\\"XXXX-XXXX-XXXX-XXXX\\\"}\" }\n\t"
+				},
+				"url": {
+					"raw": "http://108.60.213.188/attendapi/Services/getdata.asmx/attend_perform",
+					"protocol": "http",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"attendapi",
+						"Services",
+						"getdata.asmx",
+						"attend_perform"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

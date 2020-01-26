@@ -1,0 +1,15 @@
+
+
+
+-Database Login Failed 
+
+and Works in debug not on publish 
+
+1- test username and password .
+
+if (true) then 
+
+enter into iis :
+1- choose application Pools 
+2- click right on -> DefaultAppPool   - > choose advanced settings;
+3- set enable 32 Applications -> True ;

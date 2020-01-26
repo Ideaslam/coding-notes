@@ -1,0 +1,80 @@
+function am_pm(n) {
+
+
+    switch(n){
+        case 1:
+            return '1 AM'
+            break;
+        case 2:
+            return '2 AM'
+            break;
+        case 3:
+            return '3 AM'
+            break;
+        case 4:
+            return '4 AM'
+            break;
+        case 5:
+            return '5 AM'
+            break;
+        case 6:
+            return '6 AM'
+            break;
+        case 7:
+            return '7 AM'
+            break;
+        case 8:
+            return '8 AM'
+            break;
+        case 9:
+            return '9 AM'
+            break;
+        case 10:
+            return '10 AM'
+            break;
+        case 11:
+            return '11 AM'
+            break;
+        case 12:
+            return '12 PM'
+            break;
+        case 13:
+            return '1 PM'
+            break;
+        case 14:
+            return '2 PM'
+            break;
+        case 15:
+            return '3 PM'
+            break;
+        case 16:
+            return '4 PM'
+            break;
+        case 17:
+            return '5 PM'
+            break;
+        case 18:
+            return '6 PM'
+            break;
+        case 19:
+            return '7 PM'
+            break;
+        case 20:
+            return '8 PM'
+            break;
+        case 21:
+            return '9 PM'
+            break;
+        case 22:
+            return '10 PM'
+            break;
+        case 23:
+            return '11 PM'
+            break;
+        case 24:
+            return '12 AM'
+            break;
+
+    }
+
+}

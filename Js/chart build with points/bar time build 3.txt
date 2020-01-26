@@ -1,0 +1,62 @@
+function bartime(interpoint, contid, containId, name) {
+
+
+
+    if (name == 'hours') {
+        var widthsize = document.getElementById(contid).offsetWidth;
+        document.getElementById(containId).innerHTML = '';
+        document.getElementById(containId+'sun').innerHTML = '';
+
+        var test = ((widthsize / (interpoint)) / (widthsize) * 100) / 2;
+
+        
+        for (var i = 0 ; i < 24 ; i++) {
+            var n = am_pm((Number(i) + 1));
+            var timedash = '<td > <label  style="margin-left:' + Number(i) * test + '%;color:white;position:absolute" >' + n + '</label></td>';
+
+            if (i > 4 && i < 18) {
+                if (i == 5 || i ==17) {
+                    var timesun = '<td > <img src="images/hsol.png" width="30px" style=margin-left' + Number(i) * test + '></td>';
+                } else {
+                    var timesun = '<td > <img src="images/sol.png" width="30px" style=margin-left' + Number(i) * test + '></td>';
+                }
+             
+
+            } else {
+                var timesun = '<td > <img src="images/moon.png" width="30px" style=margin-left' + Number(i) * test + '></td>';
+            }
+
+
+       
+            $('#' + containId).append(timedash);
+            $('#' + containId + 'sun').append(timesun);
+
+        }
+    }
+    else if (name == 'week') {
+
+        var widthsize = document.getElementById(contid).offsetWidth;
+        document.getElementById(containId).innerHTML = '';
+
+        var test = ((widthsize / (interpoint)) / (widthsize) * 100) / 2;
+
+        var d = new Date();
+        var n = d.getDay()
+
+        console.log(n);
+        for (var i = 0 ; i < 7 ; i++) {
+
+            var wn = weekName(n);
+            
+            var timedash = '<td > <label  style="margin-left:' + Number(i) * test + '%;color:white;position:absolute" >' + wn + '</label></td>';
+            $('#' + containId).append(timedash);
+
+            n = n + 1;
+            if (n == 7) {
+                n = 0;
+            }
+
+        }
+    }
+
+}

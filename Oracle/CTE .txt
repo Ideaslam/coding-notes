@@ -1,0 +1,104 @@
+
+with CountConfirmOffers_CTE as(
+
+     SELECT accident_id , NVL (COUNT (confirmation), 0) as isExistedOffer
+                         FROM offers
+                         group by    accident_id
+
+)
+ ,
+ MaxConfirmOffers_CTE as(
+
+     SELECT accident_id , NVL (MAX (confirmation), 0)  as isAcceptedOffer
+                         FROM offers
+                         group by    accident_id
+
+)
+
+
+
+
+SELECT
+						ac.id AS accident_Id,
+			   	  user_id,
+           plateNumber_en
+
+             AS PlateNumber_En,
+           plateNumber_Ar
+             AS PlateNumber_Ar,
+          accidentdate,
+          (SELECT PAPER_ID
+             FROM fixpapers
+            WHERE id = FIXPAPER_ID)
+             paper_no,
+          CASE
+             WHEN     ac.READYTOFIX = 1
+                  AND (select isExistedOffer from CountConfirmOffers_CTE
+                        WHERE accident_id = ac.id) = 0
+                  AND (select isExistedOffer  from CountConfirmOffers_CTE
+                        WHERE accident_id = ac.id) <> 0
+             THEN
+                1
+             WHEN     ac.READYTOFIX = 1
+                  AND (SELECT isAcceptedOffer from  MaxConfirmOffers_CTE
+
+                        WHERE accident_id = ac.id) = 1
+             THEN
+                2
+             WHEN ac.READYTOFIX = 0
+             THEN
+                5
+             ELSE
+                4
+          END
+             AS status
+     FROM accidents ac
+     join VEHICLES v on ac.VEHICLE_ID =v.id;
+#-----------------------------------------------------------
+#-----------------------------------------------------------
+#-----------------------------------------------------------
+#-----------------------------------------------------------
+
+
+   SELECT id AS accident_Id,
+          (SELECT user_id
+             FROM VEHICLES
+            WHERE id = VEHICLE_ID)
+             AS user_id,
+          (SELECT plateNumber_en
+             FROM VEHICLES
+            WHERE id = VEHICLE_ID)
+             AS PlateNumber_En,
+          (SELECT plateNumber_Ar
+             FROM VEHICLES
+            WHERE id = VEHICLE_ID)
+             AS PlateNumber_Ar,
+          accidentdate,
+          (SELECT PAPER_ID
+             FROM fixpapers
+            WHERE id = FIXPAPER_ID)
+             paper_no,
+          CASE
+             WHEN     ac.READYTOFIX = 1
+                  AND (SELECT NVL (MAX (confirmation), 0)
+                         FROM offers
+                        WHERE accident_id = ac.id) = 0
+                  AND (SELECT NVL (COUNT (confirmation), 0)
+                         FROM offers
+                        WHERE accident_id = ac.id) <> 0
+             THEN
+                1
+             WHEN     ac.READYTOFIX = 1
+                  AND (SELECT NVL (MAX (confirmation), 0)
+                         FROM offers
+                        WHERE accident_id = ac.id) = 1
+             THEN
+                2
+             WHEN ac.READYTOFIX = 0
+             THEN
+                5
+             ELSE
+                4
+          END
+             AS status
+     FROM accidents ac;

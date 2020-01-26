@@ -1,0 +1,11 @@
+Grid function name (Event)
+1. rowDataBound :
+- can control elements shape and color
+and visibilty of element
+- this process comes first before row_command at runtime
+
+2. row command   :     			  
+- cannot control elements shape or color or visibility			
+- can only control the actions to be triggerd once clicking on the element 
+
+	

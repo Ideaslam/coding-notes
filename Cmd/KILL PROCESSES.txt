@@ -1,0 +1,4 @@
+taskkill /im node.exe /F
+
+TASKLIST /FI "IMAGENAME eq node.exe
+tskill nodepad

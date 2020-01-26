@@ -1,0 +1,16 @@
+function do_it(classid, i, y, speed, duration) {
+    console.log(duration);
+    setTimeout(function () {
+        var idmain = '#' + classid + i;
+        $(idmain).animate({ 'margin-top': y + '%' }, {
+            duration: Number(duration),
+            easing: 'linear',
+            complete: function () {
+                console.log('done!')
+            }
+        });
+
+
+    }, i * speed);
+
+};

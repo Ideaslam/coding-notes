@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "65164eb5-bae2-4f28-a624-05070bf61382",
+		"name": "api_connection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get_Url",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{username :\"ttt\" , password:\"05510\"}"
+				},
+				"url": {
+					"raw": "108.60.213.188/apiconnect/WebService/connection_api.asmx/get_Url",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"apiconnect",
+						"WebService",
+						"connection_api.asmx",
+						"get_Url"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HelloWorld",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "108.60.213.188/apiconnect/WebService/connection_api.asmx/HelloWorld",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"apiconnect",
+						"WebService",
+						"connection_api.asmx",
+						"HelloWorld"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit_userandpass",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{id : 1 , username :\"bawariq\" ,oldpassword:\"1\" , newpassword:\"05510\"}"
+				},
+				"url": {
+					"raw": "108.60.213.188/apiconnect/WebService/connection_api.asmx/edit_userandpass",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"apiconnect",
+						"WebService",
+						"connection_api.asmx",
+						"edit_userandpass"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "about_us",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "108.60.213.188/apiconnect/WebService/connection_api.asmx/about_us",
+					"host": [
+						"108",
+						"60",
+						"213",
+						"188"
+					],
+					"path": [
+						"apiconnect",
+						"WebService",
+						"connection_api.asmx",
+						"about_us"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

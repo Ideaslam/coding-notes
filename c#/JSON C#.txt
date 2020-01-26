@@ -1,0 +1,34 @@
+Product product = new Product();
+
+product.Name = "Apple";
+product.ExpiryDate = new DateTime(2008, 12, 28);
+product.Price = 3.99M;
+product.Sizes = new string[] { "Small", "Medium", "Large" };
+
+Javaserialization js = new Javaserialization () ;
+string output= js.serialize(product);
+
+string output = JsonConvert.SerializeObject(product);
+string output = JsonConvert.SerializeObject(product);
+//{
+//  "Name": "Apple",
+//  "ExpiryDate": "2008-12-28T00:00:00",
+//  "Price": 3.99,
+//  "Sizes": [
+//    "Small",
+//    "Medium",
+//    "Large"
+//  ]
+//}
+
+Product deserializedProduct = JsonConvert.DeserializeObject<Product>(output);
+Product deserializedProduct = js.Deserialize<Product>(output);
+var json = js.Deserialize<dynamic>(output);
+string  value = var["value1"] ;
+
+
+
+  [object object] {"name":"John", "age":31, "city":"New York" }
+
+
+  string   '{ "name":"John", "age":31, "city":"New York" }'

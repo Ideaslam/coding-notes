@@ -1,0 +1,1 @@
+gsutil -m cp -R gs://waqf-36964.appspot.com C:\Users\eslam227863\Desktop\imgs

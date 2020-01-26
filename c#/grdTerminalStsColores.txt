@@ -1,0 +1,24 @@
+    protected void grdTerminal_RowDataBound(object sender, GridViewRowEventArgs e)
+    {
+        ......
+
+
+        if (e.Row.RowType == DataControlRowType.DataRow)
+        {
+            if (Convert.ToString(DataBinder.Eval(e.Row.DataItem, "L_Status")) == "0")
+            {
+                e.Row.Cells[2].ForeColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                e.Row.Cells[2].ForeColor = System.Drawing.Color.LightGreen;
+            }
+        }
+
+
+	......
+
+
+
+    }
+

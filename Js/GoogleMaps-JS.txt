@@ -1,0 +1,89 @@
+﻿<script>
+
+
+            var map
+            var location_map;
+            var marker_drop;
+            var best_location;
+            var center_location = { lat: $('#lat_test').val(), lng: $('#lng_test').val() };
+
+            var x;
+            var y;
+            var xn = center_location.lat;
+            var yn = center_location.lng;
+            var r = 0.00009;
+            var value;
+            var r_meter = r * 111000;
+            var area = Math.pow(r_meter, 2) * 3.14;
+            var gmarkers = [];
+            console.log(area);
+
+
+
+            function myMap() {
+
+
+                var mapCanvas = document.getElementById("map");
+                var mapOptions = {
+                    center: new google.maps.LatLng(center_location.lat, center_location.lng),
+                    zoom: 15
+                };
+
+                map = new google.maps.Map(mapCanvas, mapOptions);
+
+
+                //new google.maps.Marker({ position: center_location, map: map })
+
+
+
+
+                google.maps.event.addListener(map, 'click', function (event) {
+
+                    mapZoom = map.getZoom();
+                    startLocation = event.latLng;
+                    setTimeout(placeMarker(startLocation), 600);
+
+                });
+
+
+
+                function placeMarker(location2) {
+
+                    if (mapZoom == map.getZoom()) {
+
+                        marker_drop = new google.maps.Marker({ position: location2, map: map });
+
+                        gmarkers.push(marker_drop);
+
+                        x = location2.lat();
+                        y = location2.lng();
+
+                        $('.x_lat_input').val(x);
+                        $('.y_lng_input').val(y);
+                        $('.area_loc_input').val(area);
+
+
+                        //--------------------------------------------------------------------
+                        value = Math.pow((x - xn), 2) + Math.pow((y - yn), 2) - (r * r);
+                        console.log(value);
+                        if (value <= 0)
+                            console.log(true);
+                        else
+                            console.log(false);
+                        //--------------------------------------------------------------------
+
+                        google.maps.event.addListener(marker_drop, 'click', function () {
+                            console.log(marker_drop);
+                            this.setVisible(false);
+
+                        });
+                    }
+                }
+
+                function redirect() {
+                    window.location = "mobileSignSettings.aspx";
+                }
+            }
+        </script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaao6jRkiH7tnQ2mria-K7_VYOs9Z56yY&callback=myMap"> </script>

@@ -1,0 +1,2 @@
+orapki wallet create -wallet C:\Oracle\owm -pwd Admin123# -auto_login 
+orapki wallet add -wallet C:\Oracle\owm -trusted_cert -cert "C:\wallet\GlobalSign1.crt" -pwd Admin123#

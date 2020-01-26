@@ -1,0 +1,4 @@
+css : opacity :0.5    --- wrong not practical 
+
+
+caa : background-color: rgb(r,g,b,0.5)   , this is practical because it not affect child element

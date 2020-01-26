@@ -1,0 +1,6 @@
+place this JS code at the end of webMasters design page , before the <body> tag is closed
+
+
+<script type="text/javascript">
+    $('.mytable th').css('text-align', 'center');
+</script>

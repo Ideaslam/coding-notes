@@ -1,0 +1,159 @@
+//---------------------------------AJAX GET---------------------------------
+const Http = new XMLHttpRequest();
+const url='https://jsonplaceholder.typicode.com/posts';
+Http.open("GET", url);
+Http.send();
+Http.onreadystatechange=function (){
+if(this.readystate ==4 && this.status==200)
+console.log(Http.responseText)
+}
+
+//--------------------------------------------------------------------------
+
+
+readystate:
+
+0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+
+//----------------------------------------------------------
+
+$(document).ready(function(){
+
+const url = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+$('.btn').click(fucnction(){
+
+var obj_Ajax ={
+url:"" ,
+type:"GET",
+success:function(result){console.log(result)}, //---callback
+error: function(error){console.log(error)}     //---callback
+}
+
+$.ajax(obj_Ajax) ;
+
+
+})
+})
+
+
+//------------------------------------------------------
+//------------$getmethod--------------------------------
+var url = "xxxxxxxxxxxxxxxxxxxxxxxx" ; 
+$.get(url ,fucntion(data,status){console.log(data)});
+//------------------------------------------------------
+
+//------------$postmethod--------------------------------
+var url = "xxxxxxxxxxxxxxxxxxxxxxxx" ; 
+var data ={A:1,B:2}
+$.post(url ,data,fucntion(data,status){console.log(data)});
+//------------------------------------------------------
+
+//----------------return data in json ---------------------------
+$.getJSON(url , functin(){console.log(result)});
+//---------------------------------------------------------------
+
+
+//-----------------fetch------------------------------
+fetch(url)
+.then(data=>{return data.json()})
+.then(res=>{console.log(res)})
+
+//----------------------------------------------------
+
+var otherparams ={
+headers:{"content-type" : "application/json; charset=UTF-8"},
+body:Data,
+method:"POST"
+}
+fetch(url,otherparams)
+.then(data=>{return data.json()})
+.then(res=>{console.log(res)})
+.catch(error=>console.log(error))
+
+
+//--------------------------------------------------
+
+//------------------Axios----------------------------
+
+npm install axios --save
+import axios from 'axios'
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+axios.get(url)
+.then(data=>console.log(data))
+.catch(err=>console.log(err))
+
+//-------------------------------
+
+const params={
+name:"said",
+id =21
+}
+axios.get(url,params)
+.then(data=>console.log(data))
+.catch(err=>console.log(err))
+
+//------------------------------
+
+url ="" ;
+user={
+name:"said",
+id =21
+}
+
+axios({
+method:'post',
+url:url ,
+data:{user}
+})
+
+
+////////////////////////////////////////////////
+
+function getUser(){
+userUrl ="xxxxxxxxxxxxxx";
+return axios.get(userUrl)
+}
+
+
+function getPost(){
+postUrl ="xxxxxxxxxxxxxx";
+return axios.get(postUrl)
+}
+
+axios.all([getUser(),getPost()])
+.then((users,posts)=>{
+console.log(users);
+console.log(posts);
+})
+.catch(err=>console.log(err)) ;
+
+
+//-------------------------------------------
+
+///////////////ANGULAR-------------------------
+
+
+HttpClientModule in app.module.ts
+
+ng g service  FetchdataService
+
+@Injectable()
+
+export class FetchdataService{
+
+constructoe(private http:HttpCLient){
+getData(url:string){
+return this.http.get(url)
+	}
+    }
+}
+
+
+
+
+

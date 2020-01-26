@@ -1,0 +1,15 @@
+
+
+select c.owner , a.table_name child_Table , a.column_name FK_column, c_pk.table_name   master_table ,col_pk.column_name PK_column
+from all_cons_columns   a
+join all_constraints c on a.owner =c.owner and  a.constraint_name =c.constraint_name
+join  all_constraints c_pk on c.owner =c_pk.owner and c.r_constraint_name = c_pk.constraint_name
+join   all_cons_columns col_pk on c_pk.constraint_name = col_pk.constraint_name
+
+where
+c.constraint_type= 'R'
+
+and c.owner = 'ISLAH'
+
+
+

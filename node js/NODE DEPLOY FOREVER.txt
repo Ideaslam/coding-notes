@@ -1,0 +1,3 @@
+#install node forever module globally
+
+# forever start <filename>.js

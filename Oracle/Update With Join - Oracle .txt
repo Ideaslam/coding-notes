@@ -1,0 +1,15 @@
+﻿Update with Join - Oracle
+-----------------------------------
+
+1.  Option 1
+UPDATE
+(SELECT clone_ATT_EMPLOYEE_INFO.STATUS  as OLD1,  case when emp_master.activeflag = 1 then 'ACTIVE' else 'INACTIVE' end as NEW1
+ FROM emp_master
+ JOIN clone_ATT_EMPLOYEE_INFO
+ ON emp_master.id = clone_ATT_EMPLOYEE_INFO.EMPLOYEE_NUMBER
+) t
+SET t.OLD1 = t.NEW1
+-----------------------------
+2. Option 2 (easy)
+ update    clone_ATT_EMPLOYEE_INFO c  set status = 
+ ( select  case when e.activeflag = 1 then 'ACTIVE' else 'INACTIVE' end from emp_master e  where e.id = c.EMPLOYEE_NUMBER)

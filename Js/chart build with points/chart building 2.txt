@@ -1,0 +1,60 @@
+function timeProgress2(classid, contid, color, imgpixel, zeropoint, interpoint, speed, duration, widthfactor, array) {
+
+    //  document.getElementById(contid).innerHTML = '';
+    var d = new Date();
+    var y, x, timeh, img, visible, margin_y, timenow = d.getHours(), num,
+        zeropoint, lbl, max2 = maximum(array), interpoint, widthsize = document.getElementById(contid).offsetWidth,
+        iteration, timehour = 0, timemin = 0, timeexact = 0, timedash, yarray = [], ref = [];
+
+
+    iteration = (Number(timenow) / 24 * interpoint);
+
+
+    for (var i = 0 ; i < array.length ; i++) {
+        ref[i] = array[i] / max2 * (interpoint - 1);
+    }
+
+    var newdata = interpolateArray(ref, interpoint);
+
+    for (var i = 0 ; i < interpoint ; i++) {
+
+        visible = 'block';
+        timeh = i;
+        x = timeh * widthfactor;
+
+        timeexact = (i / (interpoint - 1) * (23)) + 1;
+        timehour = parseInt(timeexact, 10);
+        timemin = Math.round((timeexact % timehour) * 60, 0);
+
+
+        lbl = Math.round(Math.round(newdata[i], 2) * max2 / (interpoint - 1), 2);
+        y = (newdata[i]) / (interpoint - 1) * zeropoint;
+
+        margin_y = zeropoint - y;
+        yarray[i] = margin_y;
+
+
+
+        // img = '<div id="divy' + timeh + '" style="width:'+imgpixel+'px;height:'+imgpixel+'px;margin-top:' + zeropoint + '%;margin-left:' + x + '%;position:absolute;display:' + visible + '"> <img id="xy' + timeh
+        //    + '" style="width:' + imgpixel + 'px;height:' + imgpixel + 'px;margin-top:' + zeropoint + '%;margin-left:' + x + '%;position:absolute;display:' + visible + '" src="images/time.png"  title=' + lbl + ' /><label style="color:white" >' + '' + '</label></div>'
+
+        // VIP  img = '<div title="' + lbl + '  -  ' +timehour+':'+timemin+ '" class="imgchart" id="divy' + timeh + '" style="width:' + imgpixel + 'px;height:' + imgpixel + 'px;margin-top:' + zeropoint + '%;margin-left:' + x + '%;position:absolute ; z-index:3000;border-radius:' + imgpixel + 'px;background-color:darkred;display:' + visible + '">'
+        //        +'</div>'
+
+        img = ' <div class="all">  <div class="lblchart" style="width:20px;height:10px;border-raduis:10px;border:solid;border-weight:0.5;border-color:lightgray;display:none;"> 1111 </div>  <div title="' + lbl + '  -  ' + timehour + ':' + timemin + '" class="' + classid + '" id="' + classid + timeh + '" style="width:' + imgpixel + 'px;height:' + imgpixel + 'px;margin-top:' + zeropoint + '%;margin-left:' + x + '%;position:absolute ; z-index:3000;border-radius:' + imgpixel + 'px;background-color:' + color + ';display:' + visible + '">'
+                 + '</div>  </div>'
+        $('#' + contid).append(img);
+
+    }
+
+
+
+    for (var i = 0 ; i < interpoint ; i++) {
+
+        do_it(classid, i, yarray[i], speed, duration);
+
+    }
+
+
+
+};

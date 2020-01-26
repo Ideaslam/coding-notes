@@ -1,0 +1,61 @@
+login  -- check mobile in api 
+signup  -- [ email , social_id , img ] 
+get profile  -- 6 data static . u ,p , img , email , rating ,fullname -- 
+edit profile 
+checkVerification 
+check user exist
+sendcode
+
+forgetpassword -- username or phonenumber ? true and send code 
+reset password , username ,newpassword  ? userobject , false 
+
+getpaper 
+GetPaper Response
+[
+{
+        "id": 1,
+        "paper_id": "1q2w5fd1",
+        "expiryDate": "2018-11-20T00:00:00",
+        "car_plateNumber": "XXX 123",
+"status" : 1
+    }
+]
+
+---
+
+user object with profile 
+
+
+
+sign up 
+
+Sign up request
+
+{
+       
+ "username" :"islamhassanssss",
+      
+  "password" :"05510",
+   
+     "phoneNumber":"0595478fff013",
+       
+ "userType"  :2,
+       
+ "doInsert" :true,
+    
+    "userImage" : "",
+     
+   "uaerMail" : "",
+   
+     "socialID" : ""
+}
+
+
+checkuserisExist (social_id)
+
+
+-----
+send code 
+{
+	"userPhone" : "0538895452"
+}

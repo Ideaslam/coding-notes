@@ -1,0 +1,3 @@
+InstallUtil.exe + Your copied path + \your service name + .exe
+
+InstallUtil.exe C:\Users\Faisal-Pathan\source\repos\MyFirstService\MyFirstService\bin\Debug\MyFirstService.exe

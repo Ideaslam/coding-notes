@@ -1,0 +1,8 @@
+  $(document).on('mouseenter', '.inweek', function () {
+
+             $(this).css("z-index", "10000");
+             $(this).css("background-color", "white");
+
+
+
+         });

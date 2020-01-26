@@ -1,0 +1,11 @@
+function maximum(array) {
+    var max = 0;
+    for (var i = 0 ; i < array.length ; i++) {
+
+
+        if (max < Number(array[i])) {
+            max = Number(array[i]);
+        }
+    }
+    return max;
+}
