@@ -1,0 +1,12 @@
+sudo mkdir -p /var/www/nursery
+sudo chown artisthaa:artisthaa /var/www/
+cd /var/www
+git clone https://github.com/Ideaslam/nursery.git
+cd nursery
+
+
+cd nursery
+sudo vim appsettings.json
+dotnet ef database update
+dotnet build
+dotnet publish

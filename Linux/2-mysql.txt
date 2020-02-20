@@ -1,0 +1,28 @@
+mysql -u root -p
+
+CREATE DATABASE live;
+
+create user 'live-admin'@'localhost' IDENTIFIED BY 'Face2010?';
+
+GRANT ALL PRIVILEGES ON live.* TO 'live-admin'@'localhost';
+
+#reload Grant table 
+FLUSH PRIVILEGES;
+
+# login 
+mysql -u live-admin -p
+
+SHOW DATABASES;
+quit;
+
+
+
+ALTER USER 'live-admin'@'localhost' IDENTIFIED BY 'Face2010?';
+FLUSH PRIVILEGES;
+
+
+
+SELECT table_name FROM information_schema.tables WHERE table_schema ='Database Name';
+
+
+SET PASSWORD FOR 'live-admin'@'localhost' = PASSWORD('Face2010?');

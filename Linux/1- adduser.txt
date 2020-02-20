@@ -1,0 +1,5 @@
+#add user
+adduser artisthaa
+
+#change user to another group
+usermode -g sudo artisthaa
