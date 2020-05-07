@@ -27,9 +27,7 @@
  join supplier in Suppliers on offer.SupplierID equals supplier.ID  
  where offer.Confirmation  ==1
  group offer by order into offers 
- 
-   
- 
+  
  select  new {
    Order=offers.Key,
    Offers=offers.ToList()
