@@ -1,0 +1,17 @@
+vim /etc/mysql/mysql.conf.d/mysqld.cnf
+
+#####
+bind-address            = 0.0.0.0
+
+
+## 
+systemctl restart mysql.service
+
+
+To make sure that, MySQL server listens on all interfaces, run the netstat command as follows.
+
+netstat -tulnp | grep mysql
+
+
+
+create user live2@'%' Identified by Face2010?
