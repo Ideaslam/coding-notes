@@ -1,0 +1,8 @@
+#!/bin/bash
+TIME=`date +%b-%d-%y`                            # This Command will read the date.
+FILENAME=backup-admfactory-$TIME.tar.gz          # The filename including the date.
+SRCDIR=/var/www/nursery/SI.Web/wwwroot/images    # Source backup folder.
+DESDIR=/live-file-backup                         # Destination of backup file.
+tar -cpzf $DESDIR/$FILENAME $SRCDIR
+
+
