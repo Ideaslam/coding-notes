@@ -1,0 +1,9 @@
+sudo systemctl status ufw
+sudo ufw enable
+ sudo ufw allow (port)/tcp
+
+ sudo ufw allow 21
+sudo ufw status verbose
+185.230.208.218
+
+sudo ufw allow from 2.91.2.80 to any port
