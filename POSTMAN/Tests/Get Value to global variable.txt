@@ -1,0 +1,2 @@
+var jsonData = JSON.parse(responseBody);
+postman.setGlobalVariable("pay_token", jsonData.token)
